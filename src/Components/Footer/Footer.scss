@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@700&display=swap');
+
+.footer-container {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 100px 0 70px;
+}
+
+.footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  gap: 30px;
+}
+
+.footer-widget {
+  flex: 1;
+
+  &.footer-widget--menu {
+    margin-bottom: 20px;
+  }
+  &.footer-widget--contact {
+    margin-bottom: 30px;
+  }
+
+  .footer-logo {
+    height: 70px;
+    margin-bottom: 24px;
+  }
+
+  .footer-about-text {
+    color:#fff;
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+
+    .social-icon {
+      background-color: #FA8507;
+      color: #fff;
+      transition: transform 0.2s;
+      font-size: 18px;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #e07506;
+      }
+    }
+  }
+
+  .footer-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: 'Rufina', serif;
+    position: relative;
+    color: #fff;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: #FA8507;
+    }
+  }
+}
+
+.footer-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  column-gap: 20px;
+
+  li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      content: '»';
+      position: absolute;
+      left: 0;
+      color: #FA8507;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: #FA8507;
+    }
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  color: #fff;
+  font-size: 20px;
+}

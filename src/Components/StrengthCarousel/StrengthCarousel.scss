@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@500&display=swap');
+
+.strength-carousel-container {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
+  text-align: center;
+   width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .title-section {
+    margin-bottom: 60px;
+
+    .main-title {
+      font-size: 64px;
+      font-weight: 700;
+      color: #222;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      color: #ff9800;
+      font-weight: 500;
+      font-family: 'Dancing Script', cursive;
+      margin-top: 8px;
+    }
+  }
+
+  .carousel-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .cards-container {
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 0 50px; 
+      justify-content: center;
+    }
+
+    .arrow-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      z-index: 10;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #ff9800;
+        svg {
+          color: white;
+        }
+      }
+
+      &.left-arrow {
+        left: 20px;
+      }
+
+      &.right-arrow {
+        right: 20px;
+      }
+    }
+  }
+
+  .strength-card {
+    background-color: #151515;
+    color: white;
+    height: 320px;
+    width: 414px;
+    border-radius: 12px;
+    padding: 60px 40px 55px 60px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .card-description {
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.6;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &.with-bg {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        z-index: -1;
+      }
+
+      .card-title {
+        // More prominent title for cards with a background
+        font-size: 28px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+} 
