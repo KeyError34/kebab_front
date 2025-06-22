@@ -10,9 +10,11 @@ body, #root {
   margin: 0;
   padding: 0;
   background: #fff;
+  
 }
 
 .header {
+  box-sizing: border-box;
   width: 1440px;
   max-width: 100vw;
   margin: 0 auto;
