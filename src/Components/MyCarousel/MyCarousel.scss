@@ -1,0 +1,59 @@
+.my-carousel {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.my-carousel__caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.my-carousel__subtitle {
+  color: #cfe2f3;
+  font-size: 38px;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 0.8s 0.1s forwards;
+}
+
+.my-carousel__title {
+  color: #fff;
+  font-size: 90px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 32px 0;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 0.4s forwards;
+}
+
+.my-carousel__btn {
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
