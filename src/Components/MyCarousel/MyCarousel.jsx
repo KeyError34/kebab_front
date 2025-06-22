@@ -68,7 +68,7 @@ const indicatorBase = {
 
 const MyCarousel = () => {
     return (
-        <Box className="my-carousel" sx={{ width: '1440px', maxWidth: '100vw', mx: 'auto', position: 'relative' }}>
+        <Box className="my-carousel" sx={{ width: '100%', maxWidth: '1440px', mx: 'auto', position: 'relative' }}>
             <Carousel
                 navButtonsAlwaysVisible
                 indicators={true}
@@ -111,12 +111,10 @@ const MyCarousel = () => {
                     <Box
                         key={idx}
                         sx={{
-                            width: '1440px',
-                            height: '900px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
+                            width: '100%',
+                            aspectRatio: '16/9',
                             position: 'relative',
+                            overflow: 'hidden',
                         }}
                     >
                         <img
