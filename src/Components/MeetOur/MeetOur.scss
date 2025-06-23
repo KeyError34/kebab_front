@@ -1,0 +1,157 @@
+.meetour {
+  padding: 48px 0 0 0;
+  background: #fff;
+}
+
+.meetour__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.meetour__title {
+  font-size: 2.8rem;
+  font-family: 'Rufina', serif;
+  color: #18181b;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.meetour__subtitle {
+  font-size: 1.2rem;
+  color: #e98b23;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.meetour__carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meetour__slide {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+}
+
+.meetour__card {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+  transform: scale(1.001) translateX(0);
+  opacity: 1;
+}
+
+.meetour__slide-exit .meetour__card {
+  opacity: 0;
+  transform: scale(0.98) translateX(-60px);
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.meetour__slide-enter .meetour__card {
+  opacity: 0;
+  transform: scale(0.98) translateX(60px);
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.meetour__slide-active .meetour__card {
+  opacity: 1;
+  transform: scale(1.001) translateX(0);
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.meetour__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.meetour__info {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 28px 32px 18px 32px;
+  margin: 0;
+  min-height: 110px;
+  width: 90%;
+  left: 5%;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meetour__name {
+  font-size: 1.5rem;
+  font-family: 'Rufina', serif;
+  color: #18181b;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.meetour__role {
+  font-size: 1.05rem;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.meetour__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.meetour__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fafafa;
+  color: #222;
+  font-size: 1.2rem;
+  border: 1.5px solid #e0e0e0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.meetour__social:hover {
+  background: #e98b23;
+  color: #fff;
+  border-color: #e98b23;
+}
+
+@media (max-width: 1100px) {
+  .meetour__slide {
+    gap: 12px;
+  }
+  .meetour__card {
+    width: 220px;
+    height: 320px;
+  }
+  .meetour__info {
+    padding: 14px 10px 10px 10px;
+    min-height: 80px;
+  }
+  .meetour__name {
+    font-size: 1.1rem;
+  }
+}

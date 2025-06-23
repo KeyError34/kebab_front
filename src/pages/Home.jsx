@@ -6,6 +6,10 @@ import Footer from "../Components/Footer/Footer.jsx"
 import AboutUsArea from "../Components/AboutUsArea/AboutUsArea.jsx";
 import Reservation from "../Components/Reservation/Reservation.jsx";
 import Menu from "../Components/Menu/Menu.jsx";
+import Testimonial from "../Components/Testimonial/Testimonial.jsx";
+import MeetOur from "../Components/MeetOur/MeetOur.jsx";
+import Brand from "../Components/Brand/Brand.jsx";
+import Blog from "../Components/Blog/Blog.jsx";
 
 const Home = () => {
     return (
@@ -16,6 +20,10 @@ const Home = () => {
             <AboutUsArea />
             <Reservation />
             <Menu />
+            <Testimonial />
+            <MeetOur />
+            <Brand />
+            <Blog />
             <Subscribe />
             <Footer />
         </div>
