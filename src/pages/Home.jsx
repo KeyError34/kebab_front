@@ -1,3 +1,4 @@
+ main
 import Header from "../Components/Header/Header.jsx";
 import MyCarousel from "../Components/MyCarousel/MyCarousel.jsx";
 import StrengthCarousel from "../Components/StrengthCarousel/StrengthCarousel.jsx"
@@ -31,3 +32,5 @@ const Home = () => {
 };
 
 export default Home;
+
+ main

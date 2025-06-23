@@ -1,3 +1,4 @@
+ main
 import './App.scss';
 import Home from './pages/Home';
 
@@ -6,6 +7,8 @@ function App() {
     <>
       <Home />
 
+
+ main
     </>
   );
 }
