@@ -1,4 +1,3 @@
-import React from 'react';
 import './Header.scss';
 import logo from '../../assets/header_img/logo.svg';
 import caretDown from '../../assets/header_img/caret-down.svg';

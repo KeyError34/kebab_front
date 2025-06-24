@@ -68,6 +68,94 @@ const indicatorBase = {
 
 const MyCarousel = () => {
     return (
+ main
+        <Box className="my-carousel" sx={{ width: '100%', maxWidth: '1440px', mx: 'auto', position: 'relative' }}>
+            <Carousel
+                navButtonsAlwaysVisible
+                indicators={true}
+                indicatorIconButtonProps={{
+                    style: {
+                        padding: 8,
+                        color: '#fff',
+                        opacity: 1,
+                    },
+                }}
+                activeIndicatorIconButtonProps={{
+                    style: {
+                        color: '#fff',
+                        border: '2px solid #fff',
+                        background: 'transparent',
+                    },
+                }}
+                indicatorContainerProps={{
+                    style: indicatorBase,
+                }}
+                NextIcon={<ArrowForwardIosIcon sx={{ fontSize: 32 }} />}
+                PrevIcon={<ArrowBackIosIcon sx={{ fontSize: 32 }} />}
+                navButtonsProps={{
+                    style: navButtonBase,
+                    className: 'mui-carousel-arrow',
+                }}
+                navButtonsWrapperProps={{
+                    style: {
+                        top: 0,
+                        height: '100%',
+                    },
+                }}
+                sx={{
+                    position: 'relative',
+                    width: '1440px',
+                    height: '900px',
+                }}
+            >
+                {slides.map((slide, idx) => (
+                    <Box
+                        key={idx}
+                        sx={{
+                            width: '100%',
+                            aspectRatio: '16/9',
+                            position: 'relative',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={slide.img}
+                            alt={`slide-${idx + 1}`}
+                            style={{
+                                width: '1440px',
+                                height: '900px',
+                                objectFit: 'cover',
+                                borderRadius: 16,
+                                boxShadow: '0 4px 32px rgba(0,0,0,0.12)',
+                                display: 'block',
+                            }}
+                        />
+                        <Box className="my-carousel__caption">
+                            <div className="my-carousel__subtitle">{slide.subtitle}</div>
+                            <h2 className="my-carousel__title">{slide.title.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>{line}<br /></React.Fragment>
+                            ))}</h2>
+                            <Button className="my-carousel__btn" variant="contained" sx={{
+                                background: '#FFA726',
+                                color: '#fff',
+                                fontWeight: 700,
+                                fontSize: 22,
+                                borderRadius: 32,
+                                px: 5,
+                                py: 1.5,
+                                mt: 3,
+                                boxShadow: '0 2px 8px rgba(255,167,38,0.15)',
+                                textTransform: 'none',
+                                '&:hover': { background: '#fb8c00' },
+                            }}>
+                                {slide.button}
+                            </Button>
+                        </Box>
+                    </Box>
+                ))}
+            </Carousel>
+            <style>{`
+=======
       <Box
         className="my-carousel"
         sx={{
@@ -166,6 +254,7 @@ const MyCarousel = () => {
           ))}
         </Carousel>
         <style>{`
+ main
         .mui-carousel-arrow:hover {
           background: #fff !important;
           color: #222 !important;
